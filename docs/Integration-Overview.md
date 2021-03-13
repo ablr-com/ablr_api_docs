@@ -2,14 +2,13 @@
 
 ## Introduction
 
-Welcome to our API reference! We're happy that you've decided to partner with us and explore our REST APIs. To get started, you'll first want to log into the Merchant Dashboard, set up your development environment, and get your API keys for the sandbox and live environments.
+Welcome to our API reference! We're happy that you've decided to partner with us and explore our REST APIs.
 
-
-### Steps for a Direct integration
+## Steps for a Direct integration
 
 This type of integration will generate a hosted-checkout experience from a server-side API request. You will control the communication flow.
 
-1. Contact Developer Support to receive your secret API key for the sandbox environment.
+1. Contact Developer Support to receive your secret API key for the staging environment.
 2. Initate checkout flow by creating a checkout object.
 3. Redirect your customers to the `redirect_url` returned by the `/checkouts` call so they can commence the checkout process.
 4. As soon as the customer confirms to pay for an Ablr transaction, *by default* Ablr would capture the fund from the customer' preferred payment method immediately before redirecting the customer back to your Merchant's `success_url`.
