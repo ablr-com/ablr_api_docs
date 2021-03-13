@@ -1,18 +1,9 @@
 {
   "items": [
     {
-      "type": "divider",
-      "title": "Development"
-    },
-    {
       "type": "item",
-      "title": "Direct",
-      "uri": "docs/Development/Direct.md"
-    },
-    {
-      "type": "item",
-      "title": "Overview",
-      "uri": "docs/Development/Overview.md"
+      "title": "Integration Overview",
+      "uri": "docs/Integration-Overview.md"
     },
     {
       "type": "divider",
