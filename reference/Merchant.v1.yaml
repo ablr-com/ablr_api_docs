@@ -7,7 +7,7 @@ info:
     name: Developer Support
     email: webmasters@ablr.com
 servers:
-  - url: /merchant/v1
+  - url: 'https://api.uat.ablr.com/merchant/v1'
 paths:
   /checkouts/:
     parameters: []
