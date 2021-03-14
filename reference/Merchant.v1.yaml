@@ -59,20 +59,21 @@ paths:
               examples:
                 Example:
                   value:
-                    id: iYO9MVDOwj8o4aonhtOGrxsi4TFh78QUuuQKdImOZhY8sr6HLFK017R5nNrgGg0N
-                    store: SG-S-P6CJWM2B6BZ2
+                    id: Ya4r1PudO0B09Aaa4Y9vzhDM4xoRgz2SNZAGTes8AMS6tYGL41nT7JTsvdhD1bj1
+                    store: SG-S-EF3478CEAW46
                     email: john.doe@example.com
                     first_name: John
                     last_name: Doe
                     amount: 123450
                     currency: SGD
-                    checkout_url: 'https://app-uat.ablr.com/sg/checkouts/iYO9MVDOwj8o4aonhtOGrxsi4TFh78QUuuQKdImOZhY8sr6HLFK017R5nNrgGg0N/'
+                    checkout_url: 'https://app-uat.ablr.com/sg/checkouts/Ya4r1PudO0B09Aaa4Y9vzhDM4xoRgz2SNZAGTes8AMS6tYGL41nT7JTsvdhD1bj1/'
       description: 'This request is made once the customer chooses to use Ablr as their payment method at checkout and will contain order and customer information. The Checkout API will then provide a response that includes a `redirect_url`, allowing you to point the customer to the Ablr checkout flow where they will complete their application or securely log in to their Ablr account to confirm the transaction.'
       security: []
       parameters:
         - schema:
             type: string
-            default: 'Token {your_api_key}'
+            example: Token gyR4jH4Nw3xJQr1p5U9fkzpZJEsXa8hM7e7y7Kgm
+            default: Token gyR4jH4Nw3xJQr1p5U9fkzpZJEsXa8hM7e7y7Kgm
           in: header
           name: Authorization
           required: true
@@ -92,7 +93,7 @@ paths:
                 store:
                   type: string
                   description: Your store ID
-                  example: ' SG-S-P6CJWM2B6BZ2'
+                  example: SG-S-EF3478CEAW46
                 email:
                   type: string
                   description: The customer's email address
@@ -126,7 +127,7 @@ paths:
             examples:
               Example:
                 value:
-                  store: ' SG-S-P6CJWM2B6BZ2'
+                  store: SG-S-EF3478CEAW46
                   email: john.doe@example.com
                   first_name: John
                   last_name: Doe
