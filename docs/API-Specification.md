@@ -2,10 +2,10 @@
 
 ## Environments
 
-Below are a list of the endpoints for API v2 in both staging (UAT) and production environments:
+Below are a list of the endpoints for API in both staging (UAT) and production environments:
 
-- Staging: https://api.uat.ablr.com/api/v2/
-- Production: https://api.ablr.com/api/v2/
+- Staging: https://api.uat.ablr.com/merchant/v1
+- Production: https://api.ablr.com/merchant/v1
 
 
 ## Authentication

@@ -6,8 +6,18 @@
       "uri": "docs/Integration-Overview.md"
     },
     {
+      "type": "item",
+      "title": "API Specification",
+      "uri": "docs/API-Specification.md"
+    },
+    {
       "type": "divider",
       "title": "APIS"
+    },
+    {
+      "type": "item",
+      "title": "Merchant API",
+      "uri": "reference/Merchant.v1.yaml"
     }
   ]
 }
