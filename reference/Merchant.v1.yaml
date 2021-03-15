@@ -38,10 +38,14 @@ paths:
                   - id
                   - checkout_url
               examples:
-                Example:
+                Example (SG):
                   value:
                     id: Ya4r1PudO0B09Aaa4Y9vzhDM4xoRgz2SNZAGTes8AMS6tYGL41nT7JTsvdhD1bj1
                     checkout_url: 'https://app-uat.ablr.com/sg/checkouts/Ya4r1PudO0B09Aaa4Y9vzhDM4xoRgz2SNZAGTes8AMS6tYGL41nT7JTsvdhD1bj1/'
+                Example (MY):
+                  value:
+                    id: LBfVq0QNQRmFr38tOWsNuiDO59dnWRmE0pqTGttk5dY1ha9po0av3SXkue2CPFFe
+                    checkout_url: 'https://app-uat.ablr.com/my/checkouts/LBfVq0QNQRmFr38tOWsNuiDO59dnWRmE0pqTGttk5dY1ha9po0av3SXkue2CPFFe/'
       description: 'This request is made once the customer chooses to use Ablr as their payment method at checkout and will contain order and customer information. The Checkout API will then provide a response that includes a `checkout_url`, allowing you to point the customer to the Ablr checkout flow where they will complete their application or securely log in to their Ablr account to confirm the transaction.'
       security: []
       parameters:
@@ -100,7 +104,7 @@ paths:
                 - amount
                 - currency
             examples:
-              Example:
+              Example (SG):
                 value:
                   store: SG-S-EF3478CEAW46
                   email: john.doe@example.com
@@ -108,6 +112,14 @@ paths:
                   last_name: Doe
                   amount: 123450
                   currency: SGD
+              Example (MY):
+                value:
+                  store: MY-S-4PQNGRNGEF99
+                  email: john.doe@example.com
+                  first_name: John
+                  last_name: Doe
+                  amount: 678900
+                  currency: MYR
 components:
   schemas: {}
   securitySchemes: {}
