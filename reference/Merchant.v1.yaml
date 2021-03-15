@@ -5,9 +5,13 @@ info:
   description: Create a hosted-checkout experience on Ablr web app
   contact:
     name: Developer Support
-    email: webmasters@ablr.com
+    email: developer@ablr.com
+    url: 'https://www.ablr.com/contact-us'
 servers:
   - url: 'https://api.uat.ablr.com/merchant/v1'
+    description: (Staging)
+  - description: (Production)
+    url: 'https://api.ablr.com/merchant/v1'
 paths:
   /checkouts/:
     parameters: []
@@ -26,48 +30,19 @@ paths:
                   id:
                     type: string
                     minLength: 1
-                  store:
-                    type: string
-                    minLength: 1
-                  email:
-                    type: string
-                    minLength: 1
-                  first_name:
-                    type: string
-                    minLength: 1
-                  last_name:
-                    type: string
-                    minLength: 1
-                  amount:
-                    type: integer
-                  currency:
-                    type: string
-                    minLength: 1
                   checkout_url:
                     type: string
                     minLength: 1
                     format: uri
                 required:
                   - id
-                  - store
-                  - email
-                  - first_name
-                  - last_name
-                  - amount
-                  - currency
                   - checkout_url
               examples:
                 Example:
                   value:
                     id: Ya4r1PudO0B09Aaa4Y9vzhDM4xoRgz2SNZAGTes8AMS6tYGL41nT7JTsvdhD1bj1
-                    store: SG-S-EF3478CEAW46
-                    email: john.doe@example.com
-                    first_name: John
-                    last_name: Doe
-                    amount: 123450
-                    currency: SGD
                     checkout_url: 'https://app-uat.ablr.com/sg/checkouts/Ya4r1PudO0B09Aaa4Y9vzhDM4xoRgz2SNZAGTes8AMS6tYGL41nT7JTsvdhD1bj1/'
-      description: 'This request is made once the customer chooses to use Ablr as their payment method at checkout and will contain order and customer information. The Checkout API will then provide a response that includes a `redirect_url`, allowing you to point the customer to the Ablr checkout flow where they will complete their application or securely log in to their Ablr account to confirm the transaction.'
+      description: 'This request is made once the customer chooses to use Ablr as their payment method at checkout and will contain order and customer information. The Checkout API will then provide a response that includes a `checkout_url`, allowing you to point the customer to the Ablr checkout flow where they will complete their application or securely log in to their Ablr account to confirm the transaction.'
       security: []
       parameters:
         - schema:
