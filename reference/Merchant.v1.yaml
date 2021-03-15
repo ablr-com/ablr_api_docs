@@ -123,8 +123,6 @@ paths:
   /charges/:
     post:
       summary: Capture a confirmed order
-      tags:
-        - merchant
       responses:
         '201':
           description: Order was successfully captured. A Charge ID is returned for future reference.

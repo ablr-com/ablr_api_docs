@@ -2,17 +2,17 @@
   "items": [
     {
       "type": "item",
-      "title": "Integration Overview",
-      "uri": "docs/Integration-Overview.md"
-    },
-    {
-      "type": "item",
       "title": "API Specification",
       "uri": "docs/API-Specification.md"
     },
     {
       "type": "item",
-      "title": "Test-Credentials",
+      "title": "Integration Overview",
+      "uri": "docs/Integration-Overview.md"
+    },
+    {
+      "type": "item",
+      "title": "Test Credentials",
       "uri": "docs/Test-Credentials.md"
     },
     {
