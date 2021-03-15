@@ -20,7 +20,7 @@ paths:
       operationId: postcheckouts
       responses:
         '201':
-          description: Created
+          description: A new checkout object was created. Customer should be redirected to `checkout_url` to commence the checkout flow on Ablr.
           content:
             application/json:
               schema:
@@ -120,6 +120,69 @@ paths:
                   last_name: Doe
                   amount: 678900
                   currency: MYR
+  /charges/:
+    post:
+      summary: Capture a confirmed order
+      tags:
+        - merchant
+      responses:
+        '201':
+          description: Order was successfully captured. A Charge ID is returned for future reference.
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  id:
+                    type: string
+                    minLength: 1
+                required:
+                  - id
+              examples:
+                Example (SG):
+                  value:
+                    id: CWd9cPNMNGDCVDEEjR50hLiyRbiZNFvhusX4p6DJXPMfQpFnJTMbueFvJLmwBwCu
+                Example (MY):
+                  value:
+                    id: o1aEgD2y4h8cGqb7ZjNbJrRMvjZzNJXUE4LbGSqB23eacR28MgIjhiYdcxINueCT
+      operationId: post-charges
+      description: |-
+        **If you opt out Ablr's automatic capture**, you must call this `/charges/` endpoint to manually capture the fund for the disbursement to the merchant the next business day. You only get paid when the order has been captured.
+
+        When the customer confirms to pay for an order on Ablr web app, they will be redirected to your `confirm_url` immediately with `ablr_order_code` and `state` query parameters (`state` param will have value of `confirm`).
+      parameters:
+        - schema:
+            type: string
+            default: Token gyR4jH4Nw3xJQr1p5U9fkzpZJEsXa8hM7e7y7Kgm
+            example: Token gyR4jH4Nw3xJQr1p5U9fkzpZJEsXa8hM7e7y7Kgm
+          in: header
+          name: Authorization
+        - schema:
+            type: string
+            default: application/json
+          in: header
+          name: Content-Type
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                order:
+                  type: string
+                  minLength: 1
+              required:
+                - order
+            examples:
+              Example (SG):
+                value:
+                  order: SG-O-BC3VWRAHGV
+              Example (MY):
+                value:
+                  order: MY-O-RQJ7JDK7WD
+        description: ''
 components:
   schemas: {}
   securitySchemes: {}

@@ -11,6 +11,11 @@
       "uri": "docs/API-Specification.md"
     },
     {
+      "type": "item",
+      "title": "Test-Credentials",
+      "uri": "docs/Test-Credentials.md"
+    },
+    {
       "type": "divider",
       "title": "APIS"
     },
