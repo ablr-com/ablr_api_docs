@@ -30,10 +30,11 @@ paths:
                   id:
                     type: string
                     minLength: 1
+                    description: Checkout ID
                   checkout_url:
                     type: string
                     minLength: 1
-                    format: uri
+                    description: Hosted-checkout URL
                 required:
                   - id
                   - checkout_url
@@ -135,6 +136,7 @@ paths:
                   id:
                     type: string
                     minLength: 1
+                    description: Charge ID
                 required:
                   - id
               examples:
@@ -148,7 +150,7 @@ paths:
       description: |-
         **If you opt out Ablr's automatic capture**, you must call this `/charges/` endpoint to manually capture the fund for the disbursement to the merchant the next business day. You only get paid when the order has been captured.
 
-        When the customer confirms to pay for an order on Ablr web app, they will be redirected to your `confirm_url` immediately with `ablr_order_code` and `state` query parameters (`state` param will have value of `confirm`).
+        When the customer confirms to pay for an order on Ablr web app, they will be redirected to your `confirm_url` immediately with `ablr_order_code` and `state` query parameters (`state` param will have value of `confirm`). Use the value of `ablr_order_code` for this `/charges/` call.
       parameters:
         - schema:
             type: string
@@ -171,6 +173,7 @@ paths:
                 order:
                   type: string
                   minLength: 1
+                  description: Ablr Order Code
               required:
                 - order
             examples:
