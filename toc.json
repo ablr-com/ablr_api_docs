@@ -2,13 +2,13 @@
   "items": [
     {
       "type": "item",
-      "title": "API Specification",
-      "uri": "docs/API-Specification.md"
+      "title": "Integration Overview",
+      "uri": "docs/Integration-Overview.md"
     },
     {
       "type": "item",
-      "title": "Integration Overview",
-      "uri": "docs/Integration-Overview.md"
+      "title": "API Specification",
+      "uri": "docs/API-Specification.md"
     },
     {
       "type": "item",
