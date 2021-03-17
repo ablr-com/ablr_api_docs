@@ -211,6 +211,10 @@ paths:
         **If you opt out Ablr's automatic capture**, you must call this `/charges/` endpoint to manually capture the fund for the disbursement to the merchant the next business day. You only get paid when the order has been captured.
 
         When the customer confirms to pay for an order on Ablr web app, they will be redirected to your `confirm_url` immediately with `ablr_order_code` and `state` query parameters (`state` param will have value of `confirm`). Use the value of `ablr_order_code` for this `/charges/` call.
+
+        An example of `confirm_url`:
+
+        https://demo.ablr.com/checkout/confirm/?merchant_ref=john.doe%40example.com&ablr_order_code=MY-O-NQJXHZVYBY&state=confirm&full_name=John+Doe+Knock
       parameters:
         - schema:
             type: string
