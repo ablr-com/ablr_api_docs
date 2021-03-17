@@ -2,7 +2,18 @@
 
 ## SMS one-time password (OTP)
 
-Use `123456` 
+Use dummy code `123456`. No SMS will actually be sent on Staging.
+
+
+## (Malaysia) Sign up using eKYC
+
+To bypass identity verification and credit check on Staging, make sure the full legal name contains the word "**Knock**" (case-insensitive)
+
+
+## Income / Salary Verification
+
+To "Connect to your bank", search for "**Fake Bank**" to use one of "Fake Bank" options. Follow the intructions on screen.
+
 
 ## Credit Card Details
 
