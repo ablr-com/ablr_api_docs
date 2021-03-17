@@ -57,8 +57,10 @@ paths:
                 properties:
                   errors:
                     type: object
+                    required:
+                      - field_name
                     properties:
-                      currency:
+                      field_name:
                         type: array
                         uniqueItems: true
                         minItems: 1
@@ -71,6 +73,9 @@ paths:
                             code:
                               type: string
                               minLength: 1
+                          required:
+                            - message
+                            - code
                 required:
                   - errors
               examples:
@@ -179,33 +184,6 @@ paths:
                 Example (MY):
                   value:
                     id: o1aEgD2y4h8cGqb7ZjNbJrRMvjZzNJXUE4LbGSqB23eacR28MgIjhiYdcxINueCT
-        '400':
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                description: ''
-                type: object
-                properties:
-                  errors:
-                    type: object
-                    properties:
-                      currency:
-                        type: array
-                        uniqueItems: true
-                        minItems: 1
-                        items:
-                          type: object
-                          properties:
-                            message:
-                              type: string
-                              minLength: 1
-                            code:
-                              type: string
-                              minLength: 1
-                required:
-                  - errors
-              examples: {}
       operationId: post-charges
       description: |-
         **If you opt out Ablr's automatic capture**, you must call this `/charges/` endpoint to manually capture the fund for the disbursement to the merchant the next business day. You only get paid when the order has been captured.
