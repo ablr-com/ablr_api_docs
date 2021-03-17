@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to our API reference! We're happy that you've decided to partner with us and explore our REST APIs.
+Welcome to our API reference! We're happy that you've decided to partner with us and explore our APIs. Use the Demo site https://demo.ablr.com to experience our checkout flow. You'd find our [Test Credentials](https://docs.ablr.com/docs/ablr/docs/Test-Credentials.md) handy.
 
 ## Steps for a Direct integration
 
