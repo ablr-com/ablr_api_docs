@@ -12,6 +12,11 @@
     },
     {
       "type": "item",
+      "title": "Webhooks",
+      "uri": "docs/Webhooks.md"
+    },
+    {
+      "type": "item",
       "title": "Test Credentials",
       "uri": "docs/Test-Credentials.md"
     },
