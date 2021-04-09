@@ -120,7 +120,7 @@ paths:
                 mobile_number:
                   type: string
                   description: The customer's mobile number
-                  example: "123456789"
+                  example: '123456789'
                 full_name:
                   type: string
                   example: John Doe
@@ -204,7 +204,7 @@ paths:
 
         An example of `confirm_url`:
 
-        https://demo.ablr.com/checkout/confirm/?merchant_ref=john.doe%40example.com&ablr_order_code=MY-O-NQJXHZVYBY&state=confirm&full_name=John+Doe+Knock
+        https://demo.ablr.com/checkout/confirm/?merchant_ref=john.doe%40example.com&ablr_order_code=MY-O-NQJXHZVYBY&state=confirm&full_name=John+Doe+Knock&checkout_id=aMXzJPEJjY66Y4McjgSfewd18eUrjNkevAvODzG8HgLuhktknjza1lcuK3MXU8km
       parameters:
         - schema:
             type: string

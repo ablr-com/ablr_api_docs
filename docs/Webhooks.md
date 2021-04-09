@@ -22,6 +22,7 @@ Example of an "order.success" event payload
     "type": "order.success",
     "data": {
       "order": {
+        "checkout": "aMXzJPEJjY66Y4McjgSfewd18eUrjNkevAvODzG8HgLuhktknjza1lcuK3MXU8km",
         "buyer": {
           "email": "john.doe@example.com",
           "full_name": "John Doe",
