@@ -57,8 +57,10 @@ paths:
                 properties:
                   errors:
                     type: object
+                    required:
+                      - field_name
                     properties:
-                      currency:
+                      field_name:
                         type: array
                         uniqueItems: true
                         minItems: 1
@@ -71,6 +73,9 @@ paths:
                             code:
                               type: string
                               minLength: 1
+                          required:
+                            - message
+                            - code
                 required:
                   - errors
               examples:
@@ -112,6 +117,14 @@ paths:
                   description: The customer's email address
                   format: email
                   example: john.doe@example.com
+                mobile_number:
+                  type: string
+                  description: The customer's mobile number
+                  example: '123456789'
+                full_name:
+                  type: string
+                  example: John Doe
+                  description: The customer's full name
                 first_name:
                   type: string
                   description: The customer's first name
@@ -133,8 +146,8 @@ paths:
               required:
                 - store
                 - email
-                - first_name
-                - last_name
+                - mobile_number
+                - full_name
                 - amount
                 - currency
             examples:
@@ -142,6 +155,8 @@ paths:
                 value:
                   store: SG-S-EF3478CEAW46
                   email: john.doe@example.com
+                  mobile_number: '91112222'
+                  full_name: John Doe
                   first_name: John
                   last_name: Doe
                   amount: 123450
@@ -150,6 +165,8 @@ paths:
                 value:
                   store: MY-S-4PQNGRNGEF99
                   email: john.doe@example.com
+                  mobile_number: '123456789'
+                  full_name: John Doe
                   first_name: John
                   last_name: Doe
                   amount: 678900
@@ -179,33 +196,6 @@ paths:
                 Example (MY):
                   value:
                     id: o1aEgD2y4h8cGqb7ZjNbJrRMvjZzNJXUE4LbGSqB23eacR28MgIjhiYdcxINueCT
-        '400':
-          description: Bad Request
-          content:
-            application/json:
-              schema:
-                description: ''
-                type: object
-                properties:
-                  errors:
-                    type: object
-                    properties:
-                      currency:
-                        type: array
-                        uniqueItems: true
-                        minItems: 1
-                        items:
-                          type: object
-                          properties:
-                            message:
-                              type: string
-                              minLength: 1
-                            code:
-                              type: string
-                              minLength: 1
-                required:
-                  - errors
-              examples: {}
       operationId: post-charges
       description: |-
         **If you opt out Ablr's automatic capture**, you must call this `/charges/` endpoint to manually capture the fund for the disbursement to the merchant the next business day. You only get paid when the order has been captured.
@@ -214,7 +204,7 @@ paths:
 
         An example of `confirm_url`:
 
-        https://demo.ablr.com/checkout/confirm/?merchant_ref=john.doe%40example.com&ablr_order_code=MY-O-NQJXHZVYBY&state=confirm&full_name=John+Doe+Knock
+        https://demo.ablr.com/checkout/confirm/?merchant_ref=john.doe%40example.com&ablr_order_code=MY-O-NQJXHZVYBY&state=confirm&full_name=John+Doe+Knock&checkout_id=aMXzJPEJjY66Y4McjgSfewd18eUrjNkevAvODzG8HgLuhktknjza1lcuK3MXU8km
       parameters:
         - schema:
             type: string

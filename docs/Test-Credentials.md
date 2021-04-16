@@ -14,6 +14,8 @@ To bypass identity verification and credit check on Staging, make sure the full 
 
 To "Connect to your bank", search for "**Fake Bank**" to use one of "Fake Bank" options. Follow the intructions on screen.
 
+![Fake Bank](../assets/images/fake-bank.png)
+
 
 ## Credit Card Details
 
