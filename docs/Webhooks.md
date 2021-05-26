@@ -2,7 +2,7 @@
 
 Ablr uses webhooks to notify your application any time a noteworthy event happens, for instance, a successful checkout.
 
-Webhook endpoints are not self-serve at the moment. Contact [Developer Support](mailto:developer@ablr.com) and provide us a **webhook endpoint** (e.g. https://test-merchant.com/a-secret-path/​) that is hosted on your server-side code so we could set it up for you. We will also send you a unique webhook's **signing secret** so you could [verify](#check-your-webhook-signatures) whether a webhook event genuinely comes from us.
+You could sign in our [Merchant Admin Dashboard (Staging)](http://merchant-uat.ablr.com/m/settings/) to set up a **webhook endpoint** (e.g. https://test-merchant.com/a-secret-path/​) that is hosted on your server, and to retrieve a unique webhook's **signing secret** so you could [verify](#check-your-webhook-signatures) whether a webhook event genuinely comes from us.
 
 
 ## About Ablr's Webhooks
