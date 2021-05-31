@@ -130,7 +130,7 @@ paths:
                 mobile_number:
                   type: string
                   description: The customer's mobile number
-                  example: '123456789'
+                  example: '91112222'
                 full_name:
                   type: string
                   example: John Doe
