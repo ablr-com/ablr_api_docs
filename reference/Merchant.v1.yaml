@@ -137,6 +137,8 @@ paths:
                   type: integer
                   description: The total amount of the checkout in cents.
                   example: 123450
+                  minimum: 7500
+                  exclusiveMinimum: false
                 currency:
                   type: string
                   enum:
