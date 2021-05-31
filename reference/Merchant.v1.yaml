@@ -2,7 +2,17 @@ openapi: 3.0.0
 info:
   title: Merchant API
   version: '1.0'
-  description: Create a hosted-checkout experience on Ablr web app
+  description: |-
+    Create a hosted-checkout experience on Ablr web app
+
+    Use the following test credentials to try out our Merchant API on Staging
+
+    - Ablr DemoStore **Singapore**: 
+      - API key: `gyR4jH4Nw3xJQr1p5U9fkzpZJEsXa8hM7e7y7Kgm`
+      - Online store ID: `SG-S-EF3478CEAW46`
+    - Ablr DemoStore **Malaysia**:
+      - API key: `GlxWuRKymxUZP18ufFZ2aZqL73dZiHdu5ZuudRjI`
+      - Online store ID: `MY-S-4PQNGRNGEF99`
   contact:
     name: Developer Support
     email: developer@ablr.com
