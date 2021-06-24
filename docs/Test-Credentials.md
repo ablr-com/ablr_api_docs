@@ -7,7 +7,13 @@ Use dummy code `123456`. No SMS will actually be sent on Staging.
 
 ## (Malaysia) Sign up using eKYC
 
-To bypass identity verification and credit check on Staging, make sure the full legal name contains the word "**Knock**" (case-insensitive)
+To bypass identity verification and credit check on Staging, make sure the full legal name contains the word "**Mariam**" (case-insensitive)
+
+To simulate:
+
+- Bankruptcy: use legal name "**Mariam Bankrupted**"
+- Bad credit (e.g. some instalments in arrears): use legal name "**Mariam Badcredit**".
+- Limit application rejection: use legal name "**Mariam Decline**".
 
 
 ## Income / Salary Verification
