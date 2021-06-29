@@ -145,7 +145,7 @@ paths:
                   example: Doe
                 amount:
                   type: integer
-                  description: The total amount of the checkout in cents.
+                  description: 'The total amount of the checkout in cents. (minimum: 7500)'
                   example: 123450
                   minimum: 7500
                   exclusiveMinimum: false
